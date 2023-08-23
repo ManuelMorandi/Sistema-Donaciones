@@ -1,0 +1,97 @@
+/* Mateo Dominguez y Manuel Morandi */
+
+*{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+body{
+	background-color: #d4d4d4;
+}
+
+nav{
+	background-color: #d4d4d4;
+	width: 19.5%;
+	float: left;
+	height: 100%;
+	text-align: center;
+	padding-left: 0.5%;
+}
+
+nav h1{
+	font-size: 20px;
+}
+
+img{
+	border-radius: 50px;
+}
+
+#refEstadisticas,#refDonantes,#refDonaciones{
+	background-color: #72a2cf;
+	border: blue 2px solid;
+	border-radius: 5px;
+	padding: 4%;
+	width: 85%;
+}
+
+#pMayorDonacion,#pTotalGeneral{
+	background-color: #3a6fa2;
+	border: skyblue 2px double;
+	border-radius: 15px;
+	padding: 1%;
+	width: 95%;
+	color: white;
+}
+
+aside{
+	background-color: #bababa;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	width: 75%;
+	height: 100%;
+	float: left;
+}
+
+#tabla tr td{
+	text-align: center;
+	border: 2px solid black;
+}
+
+#tabla tr th{
+	border: 2px solid black;
+}
+
+.rojo{
+	color: red;
+}
+
+.verde{
+	color: green;
+}
+
+#tabla{
+	width: 100%; 
+	border: 2px solid black;
+}
+
+footer{
+	clear: both;
+	text-align: center;
+	background-color: #808080;
+	color: white;
+	padding: 1px;
+	font-size: 15px;
+}
+
+@media screen and (max-width:700px){
+	nav{
+		width: 100%;
+	}
+	aside{
+		width: 100%;
+	}
+}
+
+#piechart{
+	width: 600px;
+	height: 300px;
+}

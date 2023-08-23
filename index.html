@@ -1,0 +1,95 @@
+<!--Mateo Dominguez y Manuel Morandi-->
+
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Obligatorio</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="js/clases.js"></script>
+	<script src="js/funciones.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<nav>
+		<h1>Sistema de donaciones</h1>
+		<img src="img/logo.jpg" alt="logo" width=100 height=100>
+		<br>
+		<p id="refDonantes"><a href="#donantes1">Donantes</a></p>
+		<p id="refDonaciones"><a href="#donaciones1">Donaciones</a></p>
+		<p id="refEstadisticas"><a href="#estadisticas">Estadísticas</a></p>
+		<br>
+		<p id="pTotalGeneral"><em>Total general<br><span id="textoTotalGeneral"></em></p>
+		<p id="pMayorDonacion"><em>Monto donación mayor<br><span id="textoMayorDonacion"></em></p>
+	</nav>
+	<aside>
+		<form id="formDonantes">
+			<a id="donantes1"></a>
+			<h1>Registro de donantes</h1>
+			<label for="nombre">Nombre</label>
+			<input type="text" id="nombre" placeholder="Nombre" maxlength=20 required>
+			<label for="direccion">Dirección</label>
+			<input type="text" id="direccion" placeholder="Dirección" maxlength=20 required>
+			<label for="telefono">Teléfono</label>
+			<input type="text" id="telefono" placeholder="Teléfono" maxlength=20 required>
+			<input type="button" id="boton1" value="Agregar">
+		</form>
+		<br>
+		<form id="formDonaciones">
+			<a id="donaciones1"></a>
+			<h1>Registro de donaciones</h1>
+			<label for="donante">Donante</label>
+			<select id="donante" required></select>
+			<label for="modo">Modo</label>
+			<select id="modo">
+				<option value="Efectivo" selected>Efectivo</option>
+				<option value="Transferencia">Transferencia</option>
+				<option value="Canje">Canje</option>
+				<option value="Mercadería">Mercadería</option>
+				<option value="Cheque">Cheque</option>
+				<option value="Otros">Otros</option>
+			</select>
+			<label for="monto">Monto</label>
+			<input type="number" id="monto" min=1 required>
+			<label for="comentarios">Comentarios</label>
+			<input type="text" id="comentarios" maxlength=20>
+			<input type="button" id="boton2" value="Agregar">
+		</form>
+		<h3>Donaciones registradas</h3>
+		<p>Orden:
+		<input type="radio" name="botones" id="montoDecreciente" checked>
+		<label for="montoDecreciente">Monto decreciente</label>
+		<input type="radio" name="botones" id="nombreDonante">
+		<label for="nombreDonante">Nombre donante creciente</label>
+		</p>
+		<table id="tabla">
+			<thead>
+				<tr>
+					<th>Donante</th>
+					<th>Modo</th>
+					<th>Monto</th>
+					<th>Comentarios</th>
+				</tr>
+			</thead>
+			<tbody id="tablaBody"></tbody>
+		</table>
+		<label for="check">Resaltar filas:</label>
+		<input type="checkbox" id="check">
+		<label for="deMonto">de monto:</label>
+		<input type="text" id="deMonto" placeholder="0" size="5">
+		<br><br>
+		<a id="estadisticas"></a>
+		<h1>Estadísticas</h1>
+		<p id="cantidadDonaciones"></p>
+		<p id="promedio"></p>
+		<p id="masDonante"></p>
+		<ul id="masDonantes" style="list-style-image: url('img/bullet.png')"></ul>
+		<div id="piechart"></div>
+	</aside>
+	<footer>
+		<p>Cátedra de programación - Programación 1 - Primer semestre 2021 - Mateo Dominguez (253432) - Manuel Morandi (271568)</p>
+	</footer>
+</body>
+</html>
